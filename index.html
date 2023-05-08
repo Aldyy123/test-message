@@ -12,7 +12,9 @@
       const btn = document.getElementById("btn");
       btn.addEventListener("click", () => {
         console.log("Berhasil");
-        window.ReactNativeWebView.postMessage("Hello from React Native web github")
+        setInterval(() => {
+        window.ReactNativeWebView.postMessage("Hello from React Native web github")        
+        }, 5000)
       });
     </script>
   </body>
