@@ -12,11 +12,7 @@
       const btn = document.getElementById("btn");
       btn.addEventListener("click", () => {
         console.log("Berhasil");
-        window.ReactNativeWebView.postMessage(
-            JSON.stringify({
-              title: 'Haloo'
-            })
-          );
+        window.ReactNativeWebView.postMessage("Hello from React Native web github")
       });
     </script>
   </body>
