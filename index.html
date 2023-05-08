@@ -12,17 +12,13 @@
       const btn = document.getElementById("btn");
       btn.addEventListener("click", () => {
         console.log("Berhasil");
-        if (window.ReactNativeWebView) {
-          console.log("Testt");
-          // send data object to React Native (only string)
-          window.ReactNativeWebView.postMessage(
+        window.ReactNativeWebView.postMessage(
             JSON.stringify({
               title,
               name: restaurant.name,
               image: config.URL_IMAGE_MEDIUM + restaurant.pictureId,
             })
           );
-        }
       });
     </script>
   </body>
