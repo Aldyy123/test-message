@@ -14,7 +14,7 @@
         navigator.geolocation.getCurrentPosition(
         (position) => {
           console.log(position.coords.latitude, position.coords.longitude);
-          window.ReactNativeWebView.postMessage(position);
+          window.ReactNativeWebView.postMessage(JSON.stringfy(position));
         },
         (err) => {
           console.log(err);
