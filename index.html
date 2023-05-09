@@ -11,10 +11,15 @@
     <script>
       const btn = document.getElementById("btn");
       btn.addEventListener("click", () => {
-        console.log("Berhasil");
-        setInterval(() => {
-        window.ReactNativeWebView.postMessage("Hello from React Native web github")                
-        }, 5000)
+        navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position.coords.latitude, position.coords.longitude);
+          window.ReactNativeWebView.postMessage(position);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
       });
     </script>
   </body>
